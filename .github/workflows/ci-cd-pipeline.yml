@@ -55,4 +55,4 @@ jobs:
       # Step 7: Build the Docker images using docker-compose.
       # This verifies that your Dockerfiles are correct and the images can be built.
       - name: Build Docker images
-        run: docker-compose build
+        run: docker compose build

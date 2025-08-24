@@ -14,6 +14,11 @@ load_dotenv()
 # This is the crucial line. The variable name MUST be `app`.
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    """A simple health check endpoint."""
+    return {"message": "Hello, World"}
+
 # Initialize the Gemini LLM
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=os.getenv("GOOGLE_API_KEY"))
 

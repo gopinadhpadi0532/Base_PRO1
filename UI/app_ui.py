@@ -20,7 +20,7 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
     # Get response from FastAPI backend
-    response = requests.post("http://127.0.0.1:8000/chat", json={"text": prompt})
+    response = requests.post("http://backend:8000/chat", json={"text": prompt})
     bot_response = response.json()["response"]
 
     # Display assistant response in chat message container

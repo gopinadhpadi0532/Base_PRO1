@@ -1,0 +1,23 @@
+# Use version 3.8 of the Docker Compose file format, which is modern and stable.
+version: '3.8'
+
+services:
+  backend:
+    build:
+      # The context is now ONLY the app folder.
+      context: ./app
+    container_name: genai_backend
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      # The context is now ONLY the UI folder.
+      context: ./UI
+    container_name: genai_frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend

@@ -5,10 +5,10 @@ name: Build, Test, and Create Docker Image
 on:
   # Run on pushes to the 'new2' branch.
   push:
-    branches: [ "new2" ]
+    branches: [ "new1" ]
   # Also run on pull requests targeting the 'new2' branch.
   pull_request:
-    branches: [ "new2" ]
+    branches: [ "new1" ]
 
 # Define the jobs that will run as part of the workflow.
 jobs:

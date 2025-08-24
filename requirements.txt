@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+
+pytest
+httpx
+
+streamlit
+
+langchain
+google-generativeai
+
+langchain-google-genai
+python-dotenv
+
+
